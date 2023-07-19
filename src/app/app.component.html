@@ -9,5 +9,8 @@
   <h2 *ngSwitchCase="'yellow'" style="color: yellow;">yellow color</h2>
   <h2 *ngSwitchDefault>Default case</h2>
 </div>
+<div *ngFor="let item of fruits">
+  {{item}}
+</div>
 <app-login></app-login>
 <router-outlet></router-outlet>
