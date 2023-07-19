@@ -3,5 +3,11 @@
 <button (click)="testFunc('hello')">click me</button>
 <input type="text" (keyup)="getVal($event)" #txt/>
 <button (click)="getTextBox(txt)">get value</button>
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'" style="color: red;">red color</h2>
+  <h2 *ngSwitchCase="'green'" style="color: green;">green color</h2>
+  <h2 *ngSwitchCase="'yellow'" style="color: yellow;">yellow color</h2>
+  <h2 *ngSwitchDefault>Default case</h2>
+</div>
 <app-login></app-login>
 <router-outlet></router-outlet>

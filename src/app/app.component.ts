@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  color = "green1";
   title = 'youtube';
   // @ts-ignore
   getVal(item){
