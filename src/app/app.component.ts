@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // @ts-ignore
+  onSubmit(data){
+    console.log(data)
+  }
   fruits = ['orange','banana','apple'];
   color = "green1";
   title = 'youtube';
