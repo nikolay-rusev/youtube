@@ -3,43 +3,44 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   model = {
     left: true,
     middle: false,
-    right: false
+    right: false,
   };
-  parentFunction(data: any){
-    console.warn(data)
+  parentFunction(data: any) {
+    console.warn(data);
   }
-  // @ts-ignore
-  onSubmit(data){
-    console.log(data)
+
+  onSubmit(data: any) {
+    console.log(data);
   }
-  color = "green";
-  error=false;
-  fruits = ['orange','banana','apple'];
-  heroes = ['superman','iron man','ant man'];
- hero = 'spider man';
+  color = 'green';
+  error = false;
+  fruits = ['orange', 'banana', 'apple'];
+  heroes = ['superman', 'iron man', 'ant man'];
+  hero = 'spider man';
   title = 'youtube';
+
   // @ts-ignore
-  getVal(item){
+  getVal(item) {
     console.log(item.target.value);
   }
-  // @ts-ignore
-  getTextBox(txt) {
-  console.log(txt.value)
+
+  getTextBox(txt: { value: any }) {
+    console.log(txt.value);
   }
-  // @ts-ignore
-  testFunc(a){
+
+  testFunc(a: any) {
     alert(a);
   }
-  onChangeColor(){
-    this.color='blue'
+  onChangeColor() {
+    this.color = 'blue';
   }
-  onChangeError(){
-    this.error=true
+  onChangeError() {
+    this.error = true;
   }
 }

@@ -5,63 +5,61 @@
 <h1>Bootstrap</h1>
 <p>
   <ngb-alert [dismissible]="false">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
   </ngb-alert>
 </p>
 
 <div class="btn-group btn-group-toggle">
   <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+    <input type="checkbox" ngbButton [(ngModel)]="model.left" /> Left
+    (pre-checked)
   </label>
   <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+    <input type="checkbox" ngbButton [(ngModel)]="model.middle" /> Middle
   </label>
   <label class="btn-primary" ngbButtonLabel>
-    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+    <input type="checkbox" ngbButton [(ngModel)]="model.right" /> Right
   </label>
 </div>
-<hr>
-<pre>{{model | json}}</pre>
+<hr />
+<pre>{{ model | json }}</pre>
 
 <h1>Pass data from parent to child component</h1>
 <app-user [hero]="hero" (callParentFunction)="parentFunction($event)">
-
 </app-user>
 
 <h1 [style.color]="color">Styling in angular</h1>
 <button (click)="onChangeColor()">change color</button>
-<h1 [style.color]="error?'red':'green'">Error example</h1>
+<h1 [style.color]="error ? 'red' : 'green'">Error example</h1>
 <button (click)="onChangeError()">change error</button>
 <h1>Module in angular</h1>
-<b>{{title}}</b>
+<b>{{ title }}</b>
 <button (click)="testFunc('hello')">click me</button>
-<input type="text" (keyup)="getVal($event)" #txt/>
+<input type="text" (keyup)="getVal($event)" #txt />
 <button (click)="getTextBox(txt)">get value</button>
 <div [ngSwitch]="color">
-  <h2 *ngSwitchCase="'red'" style="color: red;">red color</h2>
-  <h2 *ngSwitchCase="'green'" style="color: green;">green color</h2>
-  <h2 *ngSwitchCase="'yellow'" style="color: yellow;">yellow color</h2>
-  <h2 *ngSwitchCase="'blue'" style="color: blue;">blue color</h2>
+  <h2 *ngSwitchCase="'red'" style="color: red">red color</h2>
+  <h2 *ngSwitchCase="'green'" style="color: green">green color</h2>
+  <h2 *ngSwitchCase="'yellow'" style="color: yellow">yellow color</h2>
+  <h2 *ngSwitchCase="'blue'" style="color: blue">blue color</h2>
   <h2 *ngSwitchDefault>Default case</h2>
 </div>
 <div *ngFor="let item of fruits">
-  {{item}}
+  {{ item }}
 </div>
 <!--template driven form-->
-<br><br>
+<br /><br />
 Form here: template driven form
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
-  <input type="text" name="email" ngModel /><br><br>
-  <input type="text" name="address" ngModel /><br><br>
-  <input type="text" name="contact" ngModel /><br><br>
-  <button type="submit">
-    submit data
-  </button>
+  <input type="text" name="email" ngModel /><br /><br />
+  <input type="text" name="address" ngModel /><br /><br />
+  <input type="text" name="contact" ngModel /><br /><br />
+  <button type="submit">submit data</button>
 </form>
 <app-login></app-login>
 <h1>Angular routing</h1>
-<a routerLink="user">Go to User</a><br>
+<a routerLink="user">Go to User</a><br />
 <a routerLink="detail">Go to User Detail</a>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-
