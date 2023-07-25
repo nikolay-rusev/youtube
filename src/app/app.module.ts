@@ -11,7 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomStyleDirective } from './custom-style.directive';
-import { UserDetailComponent } from './user-detail/user-detail.component'
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component'
     FooterComponent,
     UserComponent,
     CustomStyleDirective,
-    UserDetailComponent
+    UserDetailComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
