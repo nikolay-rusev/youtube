@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit{
+  @Output() callParentFunction:EventEmitter<any>= new EventEmitter<any>();
   @Input() hero: any;
 
   ngOnInit(){
     console.warn("hero", this.hero)
+
+  }
+  onClick(){
+    this.callParentFunction.emit({name: "Nick Rusev"})
   }
 
 }

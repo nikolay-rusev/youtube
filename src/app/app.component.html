@@ -1,6 +1,8 @@
 <app-header></app-header>
 <h1>Pass data from parent to child component</h1>
-<app-user [hero]="hero"></app-user>
+<app-user [hero]="hero" (callParentFunction)="parentFunction($event)">
+
+</app-user>
 
 <h1 [style.color]="color">Styling in angular</h1>
 <button (click)="onChangeColor()">change color</button>

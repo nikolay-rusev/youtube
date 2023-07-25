@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  parentFunction(data: any){
+    console.warn(data)
+  }
   // @ts-ignore
   onSubmit(data){
     console.log(data)
