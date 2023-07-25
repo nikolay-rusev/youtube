@@ -10,8 +10,9 @@ export class AppComponent {
   onSubmit(data){
     console.log(data)
   }
+  error=false;
   fruits = ['orange','banana','apple'];
-  color = "green1";
+  color = "green";
   title = 'youtube';
   // @ts-ignore
   getVal(item){
@@ -24,5 +25,11 @@ export class AppComponent {
   // @ts-ignore
   testFunc(a){
     alert(a);
+  }
+  onChangeColor(){
+    this.color='blue'
+  }
+  onChangeError(){
+    this.error=true
   }
 }
