@@ -10,7 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserComponent } from './user/user.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CustomStyleDirective } from './custom-style.directive'
+import { CustomStyleDirective } from './custom-style.directive';
+import { UserDetailComponent } from './user-detail/user-detail.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomStyleDirective } from './custom-style.directive'
     HeaderComponent,
     FooterComponent,
     UserComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
