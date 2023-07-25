@@ -1,1 +1,66 @@
-<p>Home component</p>
+<h3>Home component</h3>
+<br />
+<h3>-----Make custom Directive in Angular-----</h3>
+<h4>Normal Head 2 text</h4>
+<h4 appCustomStyle>Custom Head 2 text</h4>
+<br />
+<h3>-----Bootstrap-----</h3>
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
+  </ngb-alert>
+</p>
+
+<div class="btn-group btn-group-toggle">
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.left" /> Left
+    (pre-checked)
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.middle" /> Middle
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.right" /> Right
+  </label>
+</div>
+<hr />
+<pre>{{ model | json }}</pre>
+<br />
+<h3>-----Pass data from parent to child component-----</h3>
+<app-user [hero]="hero" (callParentFunction)="parentFunction($event)">
+</app-user>
+
+<br /><br />
+<h3 [style.color]="color">-----Styling in angular-----</h3>
+<button (click)="onChangeColor()">change color</button>
+<h4 [style.color]="error ? 'red' : 'green'">Error example</h4>
+<button (click)="onChangeError()">change error</button>
+<br /><br />
+<h3>-----Module in angular-----</h3>
+<b>{{ title }}</b>
+<button (click)="testFunc('hello')">click me</button>
+<input type="text" (keyup)="getVal($event)" #txt />
+<button (click)="getTextBox(txt)">get value</button>
+<br /><br />
+<h3>-----ngSwitch, ngFor-----</h3>
+<div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'" style="color: red">red color</h2>
+  <h2 *ngSwitchCase="'green'" style="color: green">green color</h2>
+  <h2 *ngSwitchCase="'yellow'" style="color: yellow">yellow color</h2>
+  <h2 *ngSwitchCase="'blue'" style="color: blue">blue color</h2>
+  <h2 *ngSwitchDefault>Default case</h2>
+</div>
+<div *ngFor="let item of fruits">
+  {{ item }}
+</div>
+
+<br />
+<h3>-----Template driven form-----</h3>
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+  <input type="text" name="email" ngModel /><br /><br />
+  <input type="text" name="address" ngModel /><br /><br />
+  <input type="text" name="contact" ngModel /><br /><br />
+  <button type="submit">submit data</button>
+</form>
+<br />
