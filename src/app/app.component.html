@@ -1,4 +1,7 @@
 <app-header></app-header>
+<h1>Pass data from parent to child component</h1>
+<app-user [hero]="hero"></app-user>
+
 <h1 [style.color]="color">Styling in angular</h1>
 <button (click)="onChangeColor()">change color</button>
 <h1 [style.color]="error?'red':'green'">Error example</h1>

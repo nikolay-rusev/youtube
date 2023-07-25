@@ -10,9 +10,11 @@ export class AppComponent {
   onSubmit(data){
     console.log(data)
   }
+  color = "green";
   error=false;
   fruits = ['orange','banana','apple'];
-  color = "green";
+  heroes = ['superman','iron man','ant man'];
+ hero = 'spider man';
   title = 'youtube';
   // @ts-ignore
   getVal(item){
