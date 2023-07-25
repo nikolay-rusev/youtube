@@ -20,6 +20,10 @@ const routes: Routes = [
     component: UserComponent,
   },
   {
+    path: 'detail/:id',
+    component: UserDetailComponent,
+  },
+  {
     path: 'detail',
     component: UserDetailComponent,
   },

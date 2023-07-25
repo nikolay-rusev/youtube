@@ -39,9 +39,9 @@
 <br /><br />
 <h3>-----Module in angular-----</h3>
 <b>{{ title }}</b>
-<button (click)="testFunc('hello')">click me</button>
+<button (click)="showAlert('hello')">Click me to show Alert</button>
 <input type="text" (keyup)="getVal($event)" #txt />
-<button (click)="getTextBox(txt)">get value</button>
+<button (click)="getTextBoxValue(txt)">Get value of the text box and show it in alert</button>
 <br /><br />
 <h3>-----ngSwitch, ngFor-----</h3>
 <div [ngSwitch]="color">

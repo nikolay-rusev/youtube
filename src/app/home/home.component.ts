@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  title = 'youtube';
+  color = 'green';
+  error = false;
+  fruits = ['orange', 'banana', 'apple'];
+  hero = 'spider man';
+  heroes = ['superman', 'iron man', 'ant man'];
   model = {
     left: true,
     middle: false,
@@ -18,23 +24,17 @@ export class HomeComponent {
   onSubmit(data: any) {
     console.log(data);
   }
-  color = 'green';
-  error = false;
-  fruits = ['orange', 'banana', 'apple'];
-  heroes = ['superman', 'iron man', 'ant man'];
-  hero = 'spider man';
-  title = 'youtube';
 
   // @ts-ignore
   getVal(item) {
     console.log(item.target.value);
   }
 
-  getTextBox(txt: { value: any }) {
-    console.log(txt.value);
+  getTextBoxValue(txt: { value: any }) {
+    alert(txt.value);
   }
 
-  testFunc(a: any) {
+  showAlert(a: any) {
     alert(a);
   }
   onChangeColor() {
