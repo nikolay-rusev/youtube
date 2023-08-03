@@ -14,8 +14,16 @@ export class HomeComponent {
     this.http
       .get('https://jsonplaceholder.typicode.com/posts')
       .subscribe((data) => {
-        // console.log(data);
         this.postData = data;
+      });
+  }
+
+  // Call Post API in Angular JS
+  onPost(data: any) {
+    this.http
+      .post('http://localhost:3000/restaurant', data)
+      .subscribe((result) => {
+        console.log('result', result);
       });
   }
 

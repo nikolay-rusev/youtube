@@ -14,7 +14,6 @@ import { CustomStyleDirective } from './custom-style.directive';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
-// import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
