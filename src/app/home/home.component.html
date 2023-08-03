@@ -59,9 +59,8 @@
 <h3>-----Template driven form-----</h3>
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
   <input type="text" name="email" ngModel /><br /><br />
-  <input type="text" name="address" ngModel /><br /><br />
-  <input type="text" name="contact" ngModel /><br /><br />
-  <button type="submit">submit data</button>
+  <input type="password" name="password" ngModel /><br /><br />
+  <button type="submit">login</button>
 </form>
 <br />
 <h3>-----Bootstrap form-----</h3>
