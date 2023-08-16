@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
+// import { UserService } from './user.service';
+import { PostsService } from './posts.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,23 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private userData: UserService) {}
+  data: any;
+  constructor(private postData: PostsService) {}
+
   ngOnInit() {
-    this.userData.getData();
+    this.postData.getPosts().subscribe((result) => {
+      console.log('result', result);
+      this.data = result;
+    });
   }
 
-  callService(){
-    this.userData.getData();
-  }
+  // comment out: make simple service
+  // constructor(private userData: UserService) {}
+  // ngOnInit() {
+  //   this.userData.getData();
+  // }
+  //
+  // callService() {
+  //   this.userData.getData();
+  // }
 }
