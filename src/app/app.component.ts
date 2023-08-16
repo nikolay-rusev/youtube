@@ -8,6 +8,9 @@ import { PostsService } from './posts.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  name = 'anil';
+  str = 'Hello, how are you doing?';
+  dob = new Date(1993, 1, 1);
   data: any;
   constructor(private postData: PostsService) {}
 
