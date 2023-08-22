@@ -176,11 +176,38 @@
 </form>
 <br />
 <h3>-----Angular Reactive Form-----</h3>
-<form [formGroup]="loginForm" (ngSubmit)="collectData()">
-  <input formControlName="username" name="username" type="text" placeholder="user name" /><br /><br />
-  <input formControlName="password" name="password" type="password" placeholder="password" /><br /><br />
-  <button type="submit">Login</button>
-</form>
+<div class="col-sm-6">
+  <form
+    class="ng-reactive-form"
+    [formGroup]="loginForm"
+    (ngSubmit)="collectData()"
+  >
+    <div class="form-group">
+      <label>Email</label>
+      <input
+        formControlName="email"
+        name="email"
+        type="email"
+        placeholder="user name"
+        class="form-control"
+      />
+      <span *ngIf="email.invalid" class="error"
+        >email is required</span
+      >
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        formControlName="password"
+        name="password"
+        type="password"
+        placeholder="password"
+        class="form-control"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
 <br />
 <h3>-----Toggle element | hide and show-----</h3>
 <button type="submit" (click)="toggleTag()">toggle h4 tag</button>

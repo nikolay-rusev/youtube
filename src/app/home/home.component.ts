@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +10,12 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HomeComponent {
   // reactive angular form
   loginForm = new FormGroup({
-    username: new FormControl(''),
+    email: new FormControl('', Validators.required),
     password: new FormControl(''),
   });
+  get email() {
+    return this.loginForm.get('email');
+  }
   collectData() {
     console.warn(this.loginForm.value);
   }

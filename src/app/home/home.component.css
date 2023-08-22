@@ -1,11 +1,18 @@
-form.userFormValidatable input.ng-invalid {
+form.userFormValidatable input.ng-invalid,
+form.ng-reactive-form input.ng-invalid {
   border-right: 5px solid red;
 }
 
-form.userFormValidatable input.ng-valid {
+form.userFormValidatable input.ng-valid,
+form.ng-reactive-form input.ng-valid {
   border-right: 5px solid green;
 }
 
-form.userFormValidatable .error {
+form.userFormValidatable .error,
+form.ng-reactive-form .error {
   color: red;
+}
+
+form.ng-reactive-form h1 {
+  color: blue;
 }
