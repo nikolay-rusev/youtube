@@ -10,11 +10,20 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class HomeComponent {
   // reactive angular form
   loginForm = new FormGroup({
-    email: new FormControl('', Validators.required),
+    userEmail: new FormControl('', [Validators.required, Validators.email]),
+    userAddress: new FormControl('', [
+      Validators.required,
+      // Validators.minLength(3),
+      // Validators.maxLength(10),
+      Validators.pattern('[a-zA-Z ]*'),
+    ]),
     password: new FormControl(''),
   });
-  get email() {
-    return this.loginForm.get('email');
+  get userEmail() {
+    return this.loginForm.get('userEmail');
+  }
+  get userAddress() {
+    return this.loginForm.get('userAddress');
   }
   collectData() {
     console.warn(this.loginForm.value);
