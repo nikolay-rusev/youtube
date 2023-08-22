@@ -81,9 +81,12 @@
 <h3>-----Add Validation in Angular form-----</h3>
 <h3>-----Bootstrap form-----</h3>
 <div class="col-sm-6">
-  <form #userFormValidatable="ngForm" (ngSubmit)="onSubmit(userFormValidatable.value)">
+  <form
+    #userFormValidatable="ngForm"
+    (ngSubmit)="onSubmit(userFormValidatable.value)"
+  >
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
+      <label>Email address</label>
       <input
         name="userEmail"
         type="email"
@@ -94,15 +97,18 @@
         ngModel
         #email="ngModel"
         required
+        email
       />
-      <span *ngIf="email.invalid && email.touched" class="error">Email field is required</span>
+      <span *ngIf="email.invalid && email.touched" class="error"
+        >Email is not valid</span
+      >
       <br />
       <small id="emailHelp" class="form-text text-muted"
         >We'll never share your email with anyone else.</small
       >
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
+      <label>Password</label>
       <input
         name="userPassword"
         type="password"
@@ -110,13 +116,50 @@
         id="exampleInputPassword1"
         placeholder="Password"
         ngModel
+        required
+        #password="ngModel"
+        minlength="3"
+        maxlength="10"
       />
+      <span *ngIf="password.invalid && password.touched" class="error"
+        >Password field not valid</span
+      >
+      <br />
+    </div>
+    <div class="form-group">
+      <label>Address</label>
+      <input
+        name="userAddress"
+        type="text"
+        class="form-control"
+        id="exampleInputAddress1"
+        placeholder="Address"
+        ngModel
+        #address="ngModel"
+        pattern="[a-zA-Z ]*"
+      />
+      <span *ngIf="address.invalid && address.touched" class="error"
+        >Address field not valid</span
+      >
+      <br />
     </div>
     <div class="form-check">
-      <input name="userCheckbox" type="checkbox" class="form-check-input" id="exampleCheck1" ngModel />
+      <input
+        name="userCheckbox"
+        type="checkbox"
+        class="form-check-input"
+        id="exampleCheck1"
+        ngModel
+      />
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button
+      [disabled]="userFormValidatable.invalid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
   </form>
 </div>
 
