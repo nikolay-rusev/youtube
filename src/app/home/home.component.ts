@@ -7,6 +7,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  userData = {
+    email: 'test@test.com',
+    address: 'noida',
+    mobile: '12332947328974',
+  };
   // Call API in Angular JS
   postData: any;
   constructor(private http: HttpClient) {}

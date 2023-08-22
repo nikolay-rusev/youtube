@@ -84,6 +84,7 @@
   <form
     #userFormValidatable="ngForm"
     (ngSubmit)="onSubmit(userFormValidatable.value)"
+    class="userFormValidatable"
   >
     <div class="form-group">
       <label>Email address</label>
@@ -162,5 +163,16 @@
     </button>
   </form>
 </div>
+<br />
+<h3>-----Pre filled Form-----</h3>
 
+<form
+  #userFormPrefilled="ngForm"
+  (ngSubmit)="onSubmit(userFormPrefilled.value)"
+>
+  <input name="email" type="text" [ngModel]="userData.email" /><br /><br />
+  <input name="address" type="text" [ngModel]="userData.address" /><br /><br />
+  <input name="mobile" type="text" [ngModel]="userData.mobile" /><br /><br />
+  <button type="submit">Submit</button>
+</form>
 <br />
