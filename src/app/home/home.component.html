@@ -175,6 +175,13 @@
   <button type="submit">Submit</button>
 </form>
 <br />
+<h3>-----Angular Reactive Form-----</h3>
+<form [formGroup]="loginForm" (ngSubmit)="collectData()">
+  <input formControlName="username" name="username" type="text" placeholder="user name" /><br /><br />
+  <input formControlName="password" name="password" type="password" placeholder="password" /><br /><br />
+  <button type="submit">Login</button>
+</form>
+<br />
 <h3>-----Toggle element | hide and show-----</h3>
 <button type="submit" (click)="toggleTag()">toggle h4 tag</button>
 <h4 *ngIf="showMe">Toggle me on button click</h4>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  // reactive angular form
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
+  collectData() {
+    console.warn(this.loginForm.value);
+  }
   // Toggle element | hide and show
   showMe: boolean = false;
   toggleTag() {
