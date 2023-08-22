@@ -7,6 +7,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
+  // Toggle element | hide and show
+  showMe: boolean = false;
+  toggleTag() {
+    this.showMe = !this.showMe;
+  }
+  // Pre filled Form
   userData = {
     email: 'test@test.com',
     address: 'noida',

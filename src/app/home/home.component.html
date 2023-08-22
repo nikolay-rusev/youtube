@@ -165,7 +165,6 @@
 </div>
 <br />
 <h3>-----Pre filled Form-----</h3>
-
 <form
   #userFormPrefilled="ngForm"
   (ngSubmit)="onSubmit(userFormPrefilled.value)"
@@ -175,4 +174,8 @@
   <input name="mobile" type="text" [ngModel]="userData.mobile" /><br /><br />
   <button type="submit">Submit</button>
 </form>
+<br />
+<h3>-----Toggle element | hide and show-----</h3>
+<button type="submit" (click)="toggleTag()">toggle h4 tag</button>
+<h4 *ngIf="showMe">Toggle me on button click</h4>
 <br />
