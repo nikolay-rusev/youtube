@@ -1,6 +1,10 @@
 # Youtube
 
-angular example app
+Angular example app
+
+# Angular 9 tutorials
+
+Source videos: https://www.youtube.com/playlist?list=PL8p2I9GklV45GP23mlinXabp4d4ASdtzK
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
